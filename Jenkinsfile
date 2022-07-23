@@ -24,15 +24,6 @@ pipeline {
             }
         }
 
-        stage('sonar scan'){
-            steps {
-              sh "mvn clean verify sonar:sonar \
-  -Dsonar.projectKey=class-chandra-d2a1-repeat \
-  -Dsonar.host.url=http://54.226.50.200 \
-  -Dsonar.login=sqp_d7baf278c0ef8e56894f4a426fb2e124470d954a"
-            }
-        }
-
         stage('Package'){
             steps {
                 
